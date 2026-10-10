@@ -57,8 +57,8 @@ function handleClickButtons(e) {
         renderTasks();
     }
     else if (e.target.classList.contains('done')) {
-        console.log('Click done');
-
+        tasks[taskIndex].completed = !tasks[taskIndex].completed;
+        renderTasks();
     }
     else if (e.target.classList.contains('delete')) {
         console.log('Click delete');
