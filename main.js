@@ -61,8 +61,11 @@ function handleClickButtons(e) {
         renderTasks();
     }
     else if (e.target.classList.contains('delete')) {
-        console.log('Click delete');
-
+        const result = confirm(`Are you sure you want to delete ${tasks[taskIndex].title}?`);
+        if (result) {
+            tasks.splice(taskIndex, 1);
+            renderTasks();
+        }
     }
 }
 
